@@ -1,0 +1,44 @@
+body {
+    background-color: #ffd845;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .container .logo {
+    margin: 50px 0;
+  }
+  
+   .form {
+    margin: 50px 0;
+  }
+  
+   .big-inp input {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 4px 7px;
+  }
+  .big-inp button {
+    padding: 7px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  .box {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+   .box-pok {
+    width: 257px;
+    height: 323px;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+  }/*# sourceMappingURL=main.css.map */
