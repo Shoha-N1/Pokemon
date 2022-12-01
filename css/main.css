@@ -16,7 +16,7 @@ body {
 }
 
 .example {
-  background-color: #ffffffd3;
+  background-color: rgba(255, 255, 255, 0.8274509804);
   width: 560px;
   height: 37px;
   margin-top: 51px;
@@ -28,20 +28,17 @@ body {
   position: absolute;
 }
 
-
 .example p {
-  color: #0082ce;  
+  color: #0082ce;
 }
-
 
 .image {
   margin-left: 200px;
 }
 
-.bigger-box img{
+.bigger-box img {
   margin-top: 16px;
 }
-
 
 h2 {
   border-top: 1px solid #000;
@@ -80,4 +77,4 @@ h2 {
   border: 2px solid #000000;
   border-radius: 10px;
   background-color: #ffffff;
-} /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */ /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
