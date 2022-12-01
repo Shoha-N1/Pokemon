@@ -2,7 +2,6 @@
 var elInputHeight = document.querySelector("[data-input-height]");
 var elInputWeight = document.querySelector("[data-input-weight]");
 var elInputImg = document.querySelector("[data-input-img-url]");
-var elInputType = document.querySelector("[data-input-type]");
 var elInputName = document.querySelector("[data-input-name]");
 var elForm = document.querySelector("[data-form]");
 var elBox = document.querySelector("[data-Box]");
@@ -19,7 +18,6 @@ elForm.addEventListener("submit", function (evt)  {
   };
 
       pokemon.name = elInputName.value;
-      pokemon.type = elInputType.value;
       pokemon.height = elInputHeight.value;
       pokemon.weight = elInputWeight.value;
       pokemon.img = elInputImg.value
@@ -48,6 +46,7 @@ function createDiv(pokemon) {
   elH2.textContent = `${pokemon.name}`;
   elWeight.textContent = `${pokemon.weight}`;
   elHeight.textContent = `${pokemon.height}`;
+
 
   elDiv.appendChild(elImg);
   elDiv.appendChild(elSpan)

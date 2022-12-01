@@ -7,8 +7,10 @@ body {
   margin: 0 auto;
 }
 
-@media(max-width: $phone){
+@media (max-width: $phone){
   .container {
+    margin-left: 20px;
+    margin-top: 5px;
     flex-wrap: wrap;
   }
 }
@@ -18,14 +20,14 @@ body {
 }
 
 .form {
-  margin: 90px 0;
+  margin: 100px;
 }
 
 .example {
-  background-color: #ffffffd3;
+  background-color: rgba(255, 255, 255, 0.8274509804);
   width: 560px;
   height: 37px;
-  margin-top: 51px;
+  margin-top: 57px;
   margin-left: 230px;
   border-radius: 5px;
   display: flex;
@@ -34,20 +36,17 @@ body {
   position: absolute;
 }
 
-
 .example p {
-  color: #0082ce;  
+  color: #0082ce;
 }
-
 
 .image {
   margin-left: 200px;
 }
 
-.bigger-box img{
+.bigger-box img {
   margin-top: 16px;
 }
-
 
 h2 {
   border-top: 1px solid #000;
@@ -59,8 +58,17 @@ h2 {
 
 .big-inp input {
   border: 2px solid black;
-  border-radius: 10px;
-  padding: 4px 7px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 7px;
+  width: 170px;
+}
+
+@media (max-width: $phone){
+  .big-inp input {
+    margin-top: 7px;
+    margin-left: 5px;
+  }
 }
 
 .big-inp button {
@@ -86,4 +94,4 @@ h2 {
   border: 2px solid #000000;
   border-radius: 10px;
   background-color: #ffffff;
-} /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */ /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */

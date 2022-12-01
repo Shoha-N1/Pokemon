@@ -7,19 +7,27 @@ body {
   margin: 0 auto;
 }
 
+@media (max-width: 768px){
+  .container {
+    margin-left: 20px;
+    margin-top: 5px;
+    flex-wrap: wrap;
+  }
+}
+
 .container .logo {
   margin: 50px 0;
 }
 
 .form {
-  margin: 90px 0;
+  margin: 100px;
 }
 
 .example {
   background-color: rgba(255, 255, 255, 0.8274509804);
   width: 560px;
   height: 37px;
-  margin-top: 51px;
+  margin-top: 57px;
   margin-left: 230px;
   border-radius: 5px;
   display: flex;
@@ -50,8 +58,17 @@ h2 {
 
 .big-inp input {
   border: 2px solid black;
-  border-radius: 10px;
-  padding: 4px 7px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-right: 7px;
+  width: 170px;
+}
+
+@media (max-width: 768px){
+  .big-inp input {
+    margin-top: 7px;
+    margin-left: 5px;
+  }
 }
 
 .big-inp button {
