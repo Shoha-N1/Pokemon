@@ -1,0 +1,119 @@
+body {
+    background-color: #ffd845;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: $tab){
+   .form input {
+       margin-top: 5px;
+       margin-left: 100px;
+   }
+  
+  
+   .big-inp {
+    margin-left: 50px;
+    margin-top: 50px;
+   }
+  
+   button {
+    margin-left: -320px;
+    margin-top: 62px;
+    position: absolute;
+   }
+  
+   .box-pok:nth-child(1) {
+    margin-top: 45px;
+   }
+  
+   .box-pok:nth-child(2) {
+    margin-top: 45px;
+   }
+  
+  }
+  
+  @media (max-width: $phone){
+    .form input {  
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+  
+    button {
+      margin-top: 15px;
+      margin-left: 40px;
+    }
+  
+    .bigger-box {
+      margin-left: 500px;
+    }
+  
+    .box-pok {
+      padding-left: 90px;
+      padding-right: 90px;
+      padding-bottom: 50px;
+    }
+   }
+  .container .logo {
+    margin: 50px 0;
+  }
+  
+  .form {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .image {
+    margin-left: 200px;
+  }
+  
+  .bigger-box img {
+    margin-top: 16px;
+  }
+  
+  h2 {
+    border-top: 1px solid #000;
+    margin-top: 45px;
+    padding-top: 12px;
+    margin-bottom: 0;
+    bottom: 0;
+  }
+  
+  .big-inp input {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 7px;
+    width: 170px;
+  }
+
+  .big-inp button {
+    padding: 7px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .box {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .box-pok {
+    width: 257px;
+    height: 334px;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: #ffffff;
+  } 

@@ -7,56 +7,46 @@ body {
   margin: 0 auto;
 }
 
-@media (max-width: 820px){
- .form input {
-     margin-top: 5px;
-     margin-left: 100px;
- }
-
-
- .big-inp {
-  margin-left: 50px;
-  margin-top: 50px;
- }
-
- button {
-  margin-left: -320px;
-  margin-top: 62px;
-  position: absolute;
- }
-
- .box-pok:nth-child(1) {
-  margin-top: 45px;
- }
-
- .box-pok:nth-child(2) {
-  margin-top: 45px;
- }
-
-}
-
-@media (max-width: 375px){
-  .form input {  
-     display: flex;
-     justify-content: center;
-     align-items: center;
+@media (max-width: 820px) {
+  .form input {
+    margin-top: 5px;
+    margin-left: 100px;
   }
-
+  .big-inp {
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  button {
+    margin-left: -320px;
+    margin-top: 62px;
+    position: absolute;
+  }
+  .box-pok:nth-child(1) {
+    margin-top: 45px;
+  }
+  .box-pok:nth-child(2) {
+    margin-top: 45px;
+  }
+}
+@media (max-width: 375px) {
+  .form input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   button {
     margin-top: 15px;
     margin-left: 40px;
   }
-
   .bigger-box {
     margin-left: 500px;
   }
-
   .box-pok {
     padding-left: 90px;
     padding-right: 90px;
     padding-bottom: 50px;
   }
- }
+}
 .container .logo {
   margin: 50px 0;
 }
@@ -67,7 +57,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 
 .image {
   margin-left: 200px;
@@ -93,12 +82,6 @@ h2 {
   width: 170px;
 }
 
-@media (max-width: 768px){
-  .big-inp input {
-    margin-top: 7px;
-    margin-left: 5px;
-  }
-}
 
 .big-inp button {
   padding: 7px 15px;
@@ -123,4 +106,4 @@ h2 {
   border: 2px solid #000000;
   border-radius: 10px;
   background-color: #ffffff;
-} /*# sourceMappingURL=main.css.map */ /*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
