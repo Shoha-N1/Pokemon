@@ -8,7 +8,7 @@ var elBox = document.querySelector("[data-Box]");
 var elUl = document.querySelector("[data-ul]");
 var elTemplate = document.querySelector("[data-template]");
 var elSelect = document.querySelector("[data-select]");
- 
+//  var elButton = document.querySelector("[data-button]")
 
 
 elForm.addEventListener("submit", function (evt) {
@@ -63,13 +63,22 @@ function createDiv(pokemon) {
   var elP = document.createElement("p");
   var elWeight = document.createElement("h3");
   var elHeight = document.createElement("h3");
+  var elButton = document.createElement("button")
 
+  elButton.addEventListener("click", (evt) => {
+    elDiv.remove()
+  })
+
+  elButton.classList.add("button-1")
+
+  elButton.textContent = "Delete";
   elImg.src = `${pokemon.img}`;
   elH2.textContent = `${pokemon.name}`;
   elWeight.textContent = `${pokemon.weight}`;
   elHeight.textContent = `${pokemon.height}`;
   elP.textContent = `${pokemon.type}`;
 
+  elDiv.appendChild(elButton)
   elDiv.appendChild(elImg);
   elDiv.appendChild(elSpan);
   elDiv.appendChild(elH2);
@@ -116,3 +125,13 @@ elSelect.addEventListener("click", (evt) => {
 
   renderPokemons(elType);
 });
+
+
+// const button = document.querySelector("delete");
+// for (let i = 0; i < button.length; i++) {
+//   button[i].addEventListener("click", () => {
+//     button[i].style.display = "none";
+//     button[i].parentElement.remove();
+//   });
+// }
+  
