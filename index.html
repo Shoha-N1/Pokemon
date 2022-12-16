@@ -14,28 +14,60 @@
 <body>
 
     <div class="container">
+        <img class="image" src="./img/pokemon_logo 1.png" alt="pokemon-logo">
+        <div class="bigger-box">
 
-            <img class="image" src="./img/pokemon_logo 1.png" alt="pokemon-logo">
+            
+       
+            <select data-select name="select" class="selection" >
+                <option>Grass</option>
+                <option>Water</option>
+                <option>Fire</option>
+                <option>Bug</option>
+                <option>Normal</option>
+                <option>Ground</option>
+                <option>Fighting</option>
+                <option>Electrick</option>
+            </select>
 
-            <div class="bigger-box">
-                
-                <form data-form class="form">
-                    <div class="big-inp">
-                        <input data-input-height type="text" placeholder="height">
-                        <input data-input-weight type="text" placeholder="weight">
-                        <input data-input-img-url type="text" placeholder="image url">
-                        <input data-input-name type="text" placeholder="name">
+            <form data-form class="form">
+                <div class="big-inp">
+                    <input data-input-height type="text" placeholder="height">
+                    <input data-input-weight type="text" placeholder="weight">
+                    <input data-input-img-url type="text" placeholder="image url">
+                    <input data-input-name type="text" placeholder="name">
+                    <input type="search" data-input-search placeholder="search">
+                    <button type="submit">Add Pokemon</button>
+                </div>
+            </form>
 
-                        <button type="submit">Add Pokemon</button>
+
+
+            <ul data-ul>
+            </ul>
+
+            <template data-template>
+                <div class="card">
+                    <img class="card-img-top" />
+                    <div class="card-body">
+                      <h2 data-card-name></h2>
+                      <p data-card-type></p>
+                      <h6>
+                        <span class="span" data-card-weight></span>
+                        <span data-card-height></span>
+                      </h6>
                     </div>
-                </form>
-    
-    
-                <div data-box class="box"></div>
-    
-            </div>
+                </div>
 
-          
+                
+            </template>
+
+
+
+            <div data-box class="box"></div>
+        </div>
+
+
     </div>
     <script src="./js/pokemon.js"></script>
     <script src="./js/main.js"></script>

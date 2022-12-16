@@ -117,3 +117,15 @@ body {
     border-radius: 10px;
     background-color: #ffffff;
   } 
+
+  button:active {
+    background-color: rgb(211, 211, 211);
+  }
+
+  .selection {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 7px;
+    width: 170px;
+  }
