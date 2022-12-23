@@ -8,8 +8,7 @@ var elBox = document.querySelector("[data-Box]");
 var elUl = document.querySelector("[data-ul]");
 var elTemplate = document.querySelector("[data-template]");
 var elSelect = document.querySelector("[data-select]");
-//  var elButton = document.querySelector("[data-button]")
-
+var elSelectSort = document.querySelector("[data-select-sort]");
 
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
@@ -31,7 +30,7 @@ elForm.addEventListener("submit", function (evt) {
   elBox.prepend(createDiv(pokemon));
 });
 
-renderPokemons(pokemons)
+renderPokemons(pokemons);
 
 function renderPokemons(pPokemons) {
   elBox.innerHTML = "";
@@ -42,9 +41,7 @@ function renderPokemons(pPokemons) {
   }
 }
 
-
 function createDiv(pokemon) {
-  
   // var elCard = elTemplate.content.cloneNode(true);
   // elCard.querySelector("img").src = pokemon.img;
   // elCard.querySelector("[data-card-name]").textContent = pokemon.name;
@@ -55,7 +52,6 @@ function createDiv(pokemon) {
   // elCard.clssList.add("box-pok")
   // return elCard
 
-
   var elDiv = document.createElement("div");
   var elImg = document.createElement("img");
   var elSpan = document.createElement("span");
@@ -63,13 +59,13 @@ function createDiv(pokemon) {
   var elP = document.createElement("p");
   var elWeight = document.createElement("h3");
   var elHeight = document.createElement("h3");
-  var elButton = document.createElement("button")
+  var elButton = document.createElement("button");
 
   elButton.addEventListener("click", (evt) => {
-    elDiv.remove()
-  })
+    elDiv.remove();
+  });
 
-  elButton.classList.add("button-1")
+  elButton.classList.add("button-1");
 
   elButton.textContent = "Delete";
   elImg.src = `${pokemon.img}`;
@@ -78,7 +74,7 @@ function createDiv(pokemon) {
   elHeight.textContent = `${pokemon.height}`;
   elP.textContent = `${pokemon.type}`;
 
-  elDiv.appendChild(elButton)
+  elDiv.appendChild(elButton);
   elDiv.appendChild(elImg);
   elDiv.appendChild(elSpan);
   elDiv.appendChild(elH2);
@@ -90,7 +86,6 @@ function createDiv(pokemon) {
   return elDiv;
 }
 
-
 elInputSearch.addEventListener("keyup", (evt) => {
   var newPokemons = [];
   pokemons.forEach((pokemon) => {
@@ -101,7 +96,6 @@ elInputSearch.addEventListener("keyup", (evt) => {
   renderPokemons(newPokemons);
 });
 
-
 // function pokemonName() {
 //   elBox.innerHTML = "";
 //   pokemons.forEach((pokemon) => {
@@ -111,21 +105,18 @@ elInputSearch.addEventListener("keyup", (evt) => {
 //     elDiv.querySelector("[data-card-type]") = pokemon.type;
 //     elDiv.querySelector("[data-card-weight]") = pokemon.weight;
 //     elDiv.querySelector("[data-card-height]") = pokemon.height;
-    
+
 //     elBox.appendChild(elDiv);
 //   });
 // }
 
-
 elSelect.addEventListener("click", (evt) => {
   var elType = pokemons.filter((pokemon) =>
     pokemon.type.includes(elSelect.value)
-
   );
 
   renderPokemons(elType);
 });
-
 
 // const button = document.querySelector("delete");
 // for (let i = 0; i < button.length; i++) {
@@ -134,4 +125,15 @@ elSelect.addEventListener("click", (evt) => {
 //     button[i].parentElement.remove();
 //   });
 // }
-  
+
+elSelectSort.addEventListener("click", (evt) => {
+  var elSort = pokemons.filter(
+    (sort) =>
+      pokemons.sort(
+        (a, b) =>
+          a.name.toLowerCase().charCodeAt() - b.name.toLowerCase().charCodeAt()
+      ) 
+  );
+
+  renderPokemons(elSort);
+});

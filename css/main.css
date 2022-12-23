@@ -82,7 +82,6 @@ h2 {
   width: 170px;
 }
 
-
 .big-inp button {
   padding: 7px 15px;
   border-radius: 5px;
@@ -112,7 +111,7 @@ h2 {
   background-color: rgb(211, 211, 211);
 }
 
-h2,h3 {
+h2, h3 {
   margin: 0;
 }
 
@@ -123,13 +122,12 @@ p {
 h3 {
   margin-top: 10px;
 }
+
 h2 {
   margin-top: 25px;
   margin-bottom: 15px;
   padding-top: 18px;
 }
-
-
 
 .selection {
   border: 2px solid black;
@@ -142,7 +140,7 @@ h2 {
 .button-1 {
   width: 201px;
   height: 32px;
-  background-color: red;
+  background-color: rgba(245, 43, 7, 0.959);
   border-radius: 3px;
   opacity: 0.9;
   margin-top: 334px;
@@ -155,4 +153,4 @@ h2 {
 
 .button-1:active {
   opacity: 1;
-}
+}/*# sourceMappingURL=main.css.map */
