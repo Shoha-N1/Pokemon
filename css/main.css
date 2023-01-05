@@ -100,11 +100,11 @@ h2 {
 
 .box-pok {
   width: 257px;
-  height: 380px;
+  height: 405px;
   text-align: center;
   border: 2px solid #000000;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.4588235294);
 }
 
 .add-button:active {
@@ -116,7 +116,9 @@ h2, h3 {
 }
 
 p {
-  margin-top: 1px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 19px;
 }
 
 h3 {
@@ -140,10 +142,10 @@ h2 {
 .button-1 {
   width: 201px;
   height: 32px;
-  background-color: rgba(245, 43, 7, 0.959);
+  background-color: rgb(255, 0, 0);
   border-radius: 3px;
-  opacity: 0.9;
-  margin-top: 334px;
+  opacity: 0.8;
+  margin-top: 358px;
   margin-left: 30px;
   display: flex;
   justify-content: center;
@@ -151,6 +153,21 @@ h2 {
   position: absolute;
 }
 
+.button-1:hover {
+  opacity: 0.9;
+  transition: 0.1s ease;
+}
+
 .button-1:active {
   opacity: 1;
+}
+
+.heart {
+  cursor: pointer;
+  color: #fff;
+}
+
+.hert {
+  transition: 0.3s ease;
+  color: red;
 }/*# sourceMappingURL=main.css.map */

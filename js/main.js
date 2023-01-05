@@ -10,6 +10,10 @@ var elTemplate = document.querySelector("[data-template]");
 var elSelect = document.querySelector("[data-select]");
 var elSelectSort = document.querySelector("[data-select-sort]");
 
+var pokemons = getPokemons();
+
+renderPokemons(pokemons)
+
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   var pokemon = {
@@ -28,6 +32,11 @@ elForm.addEventListener("submit", function (evt) {
 
   pokemons.unshift(pokemon);
   elBox.prepend(createDiv(pokemon));
+
+  
+  renderPokemons(pokemon);
+
+
 });
 
 renderPokemons(pokemons);
@@ -39,6 +48,7 @@ function renderPokemons(pPokemons) {
 
     elBox.appendChild(createDiv(pokemon));
   }
+  setPokemons();
 }
 
 function createDiv(pokemon) {
@@ -56,6 +66,7 @@ function createDiv(pokemon) {
   var elImg = document.createElement("img");
   var elSpan = document.createElement("span");
   var elH2 = document.createElement("h2");
+  var elHeart = document.createElement("span")
   var elP = document.createElement("p");
   var elWeight = document.createElement("h3");
   var elHeight = document.createElement("h3");
@@ -70,6 +81,14 @@ function createDiv(pokemon) {
   elButton.textContent = "Delete";
   elImg.src = `${pokemon.img}`;
   elH2.textContent = `${pokemon.name}`;
+
+  elHeart.textContent = "❤";
+  elHeart.classList.add("heart")
+  elHeart.addEventListener("click", () => {
+    elHeart.classList.add("hert")
+    
+  })
+
   elWeight.textContent = `${pokemon.weight}`;
   elHeight.textContent = `${pokemon.height}`;
   elP.textContent = `${pokemon.type}`;
@@ -78,12 +97,14 @@ function createDiv(pokemon) {
   elDiv.appendChild(elImg);
   elDiv.appendChild(elSpan);
   elDiv.appendChild(elH2);
+  elDiv.appendChild(elHeart)
   elDiv.appendChild(elP);
   elDiv.appendChild(elWeight);
   elDiv.appendChild(elHeight);
 
   elDiv.classList.add("box-pok");
   return elDiv;
+  
 }
 
 elInputSearch.addEventListener("keyup", (evt) => {
@@ -137,3 +158,13 @@ elSelectSort.addEventListener("click", (evt) => {
 
   renderPokemons(elSort);
 });
+
+function getPokemons() {
+  const stringPokemons = localStorage.getItem("pokemons") || "[]"
+  return JSON.parse(stringPokemons);
+}
+
+function setPokemons() {
+  const stringPokemons = JSON.stringify(pokemons)
+  localStorage.setItem("pokemons", stringPokemons)
+}
