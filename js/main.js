@@ -10,9 +10,6 @@ var elTemplate = document.querySelector("[data-template]");
 var elSelect = document.querySelector("[data-select]");
 var elSelectSort = document.querySelector("[data-select-sort]");
 
-var pokemons = getPokemons();
-
-renderPokemons(pokemons)
 
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
@@ -35,11 +32,11 @@ elForm.addEventListener("submit", function (evt) {
 
   
   renderPokemons(pokemon);
-
-
+  
 });
 
 renderPokemons(pokemons);
+
 
 function renderPokemons(pPokemons) {
   elBox.innerHTML = "";
@@ -89,6 +86,8 @@ function createDiv(pokemon) {
     
   })
 
+  
+
   elWeight.textContent = `${pokemon.weight}`;
   elHeight.textContent = `${pokemon.height}`;
   elP.textContent = `${pokemon.type}`;
@@ -105,6 +104,10 @@ function createDiv(pokemon) {
   elDiv.classList.add("box-pok");
   return elDiv;
   
+}
+
+function calc() {
+  return elHeart
 }
 
 elInputSearch.addEventListener("keyup", (evt) => {
@@ -160,11 +163,11 @@ elSelectSort.addEventListener("click", (evt) => {
 });
 
 function getPokemons() {
-  const stringPokemons = localStorage.getItem("pokemons") || "[]"
+  const stringPokemons = localStorage.getItem("elHeart") || "[]"
   return JSON.parse(stringPokemons);
 }
 
 function setPokemons() {
-  const stringPokemons = JSON.stringify(pokemons)
-  localStorage.setItem("pokemons", stringPokemons)
+  const stringPokemons = JSON.stringify(elHeart)
+  localStorage.setItem("elHeart", stringPokemons)
 }
