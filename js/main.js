@@ -11,6 +11,26 @@ let elSelect = document.querySelector("[data-select]");
 let elSelectSort = document.querySelector("[data-select-sort]");
 
 
+let favorites = [];
+
+elBox.addEventListener("click", (evt) => {
+
+  onFavoriteClick(evt)
+})
+
+
+function onFavoriteClick(evt){
+  let el = evt.target.closest("[data-card-delete]")
+
+  if(!el) return;
+
+  let id = el.dataset.id;
+  favorites.push(id)
+
+  renderPokemons(pokemons)
+}
+
+
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   let pokemon = {
@@ -35,8 +55,7 @@ elForm.addEventListener("submit", function (evt) {
   
 });
 
-renderPokemons(pokemons);
-
+renderPokemons(pokemons)
 
 function renderPokemons(pPokemons) {
   elBox.innerHTML = "";
@@ -49,15 +68,6 @@ function renderPokemons(pPokemons) {
 }
 
 function createDiv(pokemon) {
-  // let elCard = elTemplate.content.cloneNode(true);
-  // elCard.querySelector("img").src = pokemon.img;
-  // elCard.querySelector("[data-card-name]").textContent = pokemon.name;
-  // elCard.querySelector("[data-card-type]").textContent = pokemon.type;
-  // elCard.querySelector("[data-card-weight]").textContent = pokemon.weight;
-  // elCard.querySelector("[data-card-height]").textContent = pokemon.height;
-
-  // elCard.clssList.add("box-pok")
-  // return elCard
 
   let elDiv = document.createElement("div");
   let elImg = document.createElement("img");
@@ -68,24 +78,23 @@ function createDiv(pokemon) {
   let elWeight = document.createElement("h3");
   let elHeight = document.createElement("h3");
   let elButton = document.createElement("button");
-
-  elButton.addEventListener("click", (evt) => {
-    elDiv.remove();
-  });
+  
 
   elButton.classList.add("button-1");
 
-  elButton.textContent = "Delete";
+  elButton.textContent = "Add";
   elImg.src = `${pokemon.img}`;
   elH2.textContent = `${pokemon.name}`;
 
   elHeart.textContent = "❤";
   elHeart.classList.add("heart")
   elHeart.addEventListener("click", () => {
-    // // elHeart.classList.add("hert")
+    // elHeart.classList.add("hert")
     // elHeart.style.color = "red"  elHeart.style.color = "white"
     
   })
+
+  
 
   elWeight.textContent = `${pokemon.weight}`;
   elHeight.textContent = `${pokemon.height}`;
