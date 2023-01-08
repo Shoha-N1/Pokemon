@@ -11,7 +11,7 @@ let elSelect = document.querySelector("[data-select]");
 let elSelectSort = document.querySelector("[data-select-sort]");
 
 
-let favorites = [];
+let favorites = getFavorites();
 
 elBox.addEventListener("click", (evt) => {
 
@@ -25,9 +25,26 @@ function onFavoriteClick(evt){
   if(!el) return;
 
   let id = el.dataset.id;
-  favorites.push(id)
 
+  
+ 
+  if (favorites.includes(id)){
+    favorites.splice(favorites.indexOf(id), 1)
+  }
+  else{
+    favorites.push(id)
+  }
+  setFavorites(favorites)
   renderPokemons(pokemons)
+}
+
+function setFavorites(favorites){
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+
+function getFavorites(){
+  let stringFav = localStorage.getItem("favorites") || "[]"
+  return JSON.parse(stringFav)
 }
 
 
@@ -78,6 +95,10 @@ function createDiv(pokemon) {
   let elWeight = document.createElement("h3");
   let elHeight = document.createElement("h3");
   let elButton = document.createElement("button");
+
+  
+  elButton.dataset.id = pokemon.id;
+  elButton.textContent = favorites.includes(pokemon.id) ? "Added" : "Add";  
   
 
   elButton.classList.add("button-1");
@@ -111,6 +132,7 @@ function createDiv(pokemon) {
 
   elDiv.classList.add("box-pok");
   return elDiv;
+  
   
 }
 

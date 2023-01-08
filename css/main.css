@@ -90,13 +90,6 @@ span {
   width: 170px;
 }
 
-.big-inp button {
-  padding: 7px 15px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
 .box {
   max-width: 1200px;
   display: flex;
@@ -113,6 +106,12 @@ span {
   border: 2px solid #000000;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.4588235294);
+}
+
+.add-button {
+  padding: 7px 15px;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
 
 .add-button:active {
@@ -190,4 +189,38 @@ h3:first-of-type {
 
 button {
   cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  display: none;
+}
+.modal.show {
+  display: flex;
+}
+
+.modal__content {
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  word-spacing: 3px;
+  letter-spacing: 0.2px;
+  line-height: 25px;
+}
+
+.button-01 {
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 255, 0.87);
+  opacity: 0.8;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

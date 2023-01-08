@@ -17,9 +17,9 @@
         <img class="image" src="./img/pokemon_logo 1.png" alt="pokemon-logo">
         <div class="bigger-box">
 
-            
-       
-            <select data-select name="select" class="selection" >
+
+
+            <select data-select name="select" class="selection">
                 <option>Grass</option>
                 <option>Water</option>
                 <option>Fire</option>
@@ -29,7 +29,7 @@
                 <option>Fighting</option>
             </select>
 
-            <select data-select-sort name="select" class="selection" >
+            <select data-select-sort name="select" class="selection">
                 <option>A-Z</option>
                 <option>Z-A</option>
                 <option>Weight Up</option>
@@ -46,6 +46,7 @@
                     <input data-input-name type="text" placeholder="name">
                     <input type="search" data-input-search placeholder="search">
                     <button class="add-button" type="submit">Add Pokemon</button>
+                    <button type="button" data-modal-open ="#test-modal" class="button-01">Favorites</button>
                 </div>
             </form>
 
@@ -57,25 +58,33 @@
                 <div data-div-temp class="card">
                     <img data-img-temp class="card-img-top" />
                     <div data-div-temp-body class="card-body">
-                      <h2 data-card-name></h2>
-                      <img data-heart>
-                      <p data-card-type></p>
-                     
+                        <h2 data-card-name></h2>
+                        <img data-heart>
+                        <p data-card-type></p>
+
                         <span class="span" data-card-weight></span>
                         <span data-card-height></span>
-                   
-                      <button data-card-delete class="button-1">Delete-success</button>
+
+                        <button data-card-delete></button>
                     </div>
-                </div>       
+                </div>
             </template>
 
+            <div class="modal" id="test-modal" data-modal>
+                <div class="modal__content" data-modal-content>
+                    <button data-modal-close type="button">X</button>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla hic doloremque blanditiis architecto
+                    ipsam accusamus praesentium nisi sint cum, magni perspiciatis dignissimos repudiandae, debitis
+                    laborum iure consectetur at. Natus, tenetur.
+                </div>
+            </div>
 
-        
         </div>
 
 
     </div>
     <script src="./js/pokemon.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
