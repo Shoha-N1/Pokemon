@@ -1,6 +1,6 @@
 
 
-var pokemons = [
+let pokemons = [
     {
       id: 1,
       num: "001",

@@ -1,19 +1,19 @@
-var elInputHeight = document.querySelector("[data-input-height]");
-var elInputWeight = document.querySelector("[data-input-weight]");
-var elInputImg = document.querySelector("[data-input-img-url]");
-var elInputName = document.querySelector("[data-input-name]");
-var elInputSearch = document.querySelector("[data-input-search]");
-var elForm = document.querySelector("[data-form]");
-var elBox = document.querySelector("[data-Box]");
-var elUl = document.querySelector("[data-ul]");
-var elTemplate = document.querySelector("[data-template]");
-var elSelect = document.querySelector("[data-select]");
-var elSelectSort = document.querySelector("[data-select-sort]");
+let elInputHeight = document.querySelector("[data-input-height]");
+let elInputWeight = document.querySelector("[data-input-weight]");
+let elInputImg = document.querySelector("[data-input-img-url]");
+let elInputName = document.querySelector("[data-input-name]");
+let elInputSearch = document.querySelector("[data-input-search]");
+let elForm = document.querySelector("[data-form]");
+let elBox = document.querySelector("[data-box]");
+let elUl = document.querySelector("[data-ul]");
+let elTemplate = document.querySelector("[data-template]");
+let elSelect = document.querySelector("[data-select]");
+let elSelectSort = document.querySelector("[data-select-sort]");
 
 
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  var pokemon = {
+  let pokemon = {
     name: null,
     img: null,
     height: null,
@@ -31,7 +31,7 @@ elForm.addEventListener("submit", function (evt) {
   elBox.prepend(createDiv(pokemon));
 
   
-  renderPokemons(pokemon);
+  renderPokemons(pokemons);
   
 });
 
@@ -40,16 +40,16 @@ renderPokemons(pokemons);
 
 function renderPokemons(pPokemons) {
   elBox.innerHTML = "";
-  for (var i = 0; i < pPokemons.length; i++) {
-    var pokemon = pPokemons[i];
+  for (let i = 0; i < pPokemons.length; i++) {
+    let pokemon = pPokemons[i];
 
     elBox.appendChild(createDiv(pokemon));
   }
-  setPokemons();
+ 
 }
 
 function createDiv(pokemon) {
-  // var elCard = elTemplate.content.cloneNode(true);
+  // let elCard = elTemplate.content.cloneNode(true);
   // elCard.querySelector("img").src = pokemon.img;
   // elCard.querySelector("[data-card-name]").textContent = pokemon.name;
   // elCard.querySelector("[data-card-type]").textContent = pokemon.type;
@@ -59,15 +59,15 @@ function createDiv(pokemon) {
   // elCard.clssList.add("box-pok")
   // return elCard
 
-  var elDiv = document.createElement("div");
-  var elImg = document.createElement("img");
-  var elSpan = document.createElement("span");
-  var elH2 = document.createElement("h2");
-  var elHeart = document.createElement("span")
-  var elP = document.createElement("p");
-  var elWeight = document.createElement("h3");
-  var elHeight = document.createElement("h3");
-  var elButton = document.createElement("button");
+  let elDiv = document.createElement("div");
+  let elImg = document.createElement("img");
+  let elSpan = document.createElement("span");
+  let elH2 = document.createElement("h2");
+  let elHeart = document.createElement("b")
+  let elP = document.createElement("p");
+  let elWeight = document.createElement("h3");
+  let elHeight = document.createElement("h3");
+  let elButton = document.createElement("button");
 
   elButton.addEventListener("click", (evt) => {
     elDiv.remove();
@@ -82,15 +82,14 @@ function createDiv(pokemon) {
   elHeart.textContent = "❤";
   elHeart.classList.add("heart")
   elHeart.addEventListener("click", () => {
-    elHeart.classList.add("hert")
+    // // elHeart.classList.add("hert")
+    // elHeart.style.color = "red"  elHeart.style.color = "white"
     
   })
 
-  
-
   elWeight.textContent = `${pokemon.weight}`;
   elHeight.textContent = `${pokemon.height}`;
-  elP.textContent = `${pokemon.type}`;
+  elP.textContent = `${pokemon.type}`; 
 
   elDiv.appendChild(elButton);
   elDiv.appendChild(elImg);
@@ -106,12 +105,9 @@ function createDiv(pokemon) {
   
 }
 
-function calc() {
-  return elHeart
-}
 
 elInputSearch.addEventListener("keyup", (evt) => {
-  var newPokemons = [];
+  let newPokemons = [];
   pokemons.forEach((pokemon) => {
     if (pokemon.name.includes(elInputSearch.value)) {
       newPokemons.push(pokemon);
@@ -123,7 +119,7 @@ elInputSearch.addEventListener("keyup", (evt) => {
 // function pokemonName() {
 //   elBox.innerHTML = "";
 //   pokemons.forEach((pokemon) => {
-//     var elDiv = elTemplate.content.cloneNode(true);
+//     let elDiv = elTemplate.content.cloneNode(true);
 //     elDiv.querySelector("img").textContent = pokemon.img;
 //     elDiv.querySelector("[data-card-name]") = pokemon.name;
 //     elDiv.querySelector("[data-card-type]") = pokemon.type;
@@ -135,23 +131,17 @@ elInputSearch.addEventListener("keyup", (evt) => {
 // }
 
 elSelect.addEventListener("click", (evt) => {
-  var elType = pokemons.filter((pokemon) =>
+  let elType = pokemons.filter((pokemon) =>
     pokemon.type.includes(elSelect.value)
   );
 
   renderPokemons(elType);
 });
 
-// const button = document.querySelector("delete");
-// for (let i = 0; i < button.length; i++) {
-//   button[i].addEventListener("click", () => {
-//     button[i].style.display = "none";
-//     button[i].parentElement.remove();
-//   });
-// }
+
 
 elSelectSort.addEventListener("click", (evt) => {
-  var elSort = pokemons.filter(
+  let elSort = pokemons.filter(
     (sort) =>
       pokemons.sort(
         (a, b) =>
@@ -162,12 +152,3 @@ elSelectSort.addEventListener("click", (evt) => {
   renderPokemons(elSort);
 });
 
-function getPokemons() {
-  const stringPokemons = localStorage.getItem("elHeart") || "[]"
-  return JSON.parse(stringPokemons);
-}
-
-function setPokemons() {
-  const stringPokemons = JSON.stringify(elHeart)
-  localStorage.setItem("elHeart", stringPokemons)
-}

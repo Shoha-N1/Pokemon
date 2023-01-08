@@ -63,15 +63,26 @@ body {
 }
 
 .bigger-box img {
-  margin-top: 16px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 h2 {
-  border-top: 1px solid #000;
-  margin-top: 45px;
-  padding-top: 12px;
-  margin-bottom: 0;
-  bottom: 0;
+  padding-top: 18px;
+  padding-bottom: 7px;
+}
+
+
+span {
+  border-bottom: 1px solid #000;
+    width: 260px;
+    position: absolute;
+    // margin-top: 178px;
+    // margin-left: -189px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -1px;
 }
 
 .big-inp input {
@@ -101,7 +112,7 @@ h2 {
 
 .box-pok {
   width: 257px;
-  height: 405px;
+  height: 415px;
   text-align: center;
   border: 2px solid #000000;
   border-radius: 10px;
@@ -125,12 +136,6 @@ p {
 h3 {
   margin-top: 10px;
 }
-h2 {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  padding-top: 18px;
-}
-
 
 
 .selection {
@@ -147,12 +152,16 @@ h2 {
   background-color: rgb(255, 0, 0);
   border-radius: 4px;
   opacity: 0.8;
-  margin-top: 358px;
+  margin-top: 367px;
   margin-left: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
+}
+
+h3:first-of-type {
+  margin-top: 14px;
 }
 
 .button-1:hover {
@@ -176,7 +185,22 @@ h2 {
 
 }
 
+
 .hert {
   transition: 0.3s ease;
   color: red;
+}
+
+.hert2 {
+  transition: 0.3s ease;
+  color: rgb(255, 255, 255);
+}
+
+ .box-pok img {
+  width: 110px;
+  height: 110px;
+}
+
+button {
+  cursor: pointer;
 }
