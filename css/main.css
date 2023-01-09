@@ -117,9 +117,6 @@ span {
 .box-pok button:active {
   background-color: rgb(22, 175, 22);
 }
-.box-pok button:hover {
-  opacity: 0.1;
-}
 
 .add-button {
   padding: 7px 15px;
