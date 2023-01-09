@@ -107,6 +107,16 @@ span {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.4588235294);
 }
+.box-pok button {
+  width: 150px;
+  height: 32px;
+  background-color: rgba(22, 175, 22, 0.863);
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.box-pok button:active {
+  background-color: rgb(22, 175, 22);
+}
 
 .add-button {
   padding: 7px 15px;
@@ -180,11 +190,6 @@ h3:first-of-type {
 .hert2 {
   transition: 0.3s ease;
   color: rgb(255, 255, 255);
-}
-
-.box-pok img {
-  width: 110px;
-  height: 110px;
 }
 
 button {
