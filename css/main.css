@@ -196,6 +196,15 @@ button {
   cursor: pointer;
 }
 
+.pok-mod {
+  padding-left: 5px;
+  display: inline-block;
+}
+.pok-mod::after {
+  content: ",";
+  padding-left: 2px;
+}
+
 .modal {
   position: fixed;
   inset: 0;
@@ -211,7 +220,7 @@ button {
 }
 
 .modal__content {
-  max-width: 600px;
+  max-width: 900px;
   background-color: #fff;
   border-radius: 5px;
   padding: 30px;

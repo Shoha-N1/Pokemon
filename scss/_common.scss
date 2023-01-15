@@ -217,3 +217,14 @@ button {
   cursor: pointer;
 }
 
+
+
+.pok-mod {
+  padding-left: 5px;
+  display: inline-block;
+
+  &::after {
+    content: ",";
+    padding-left: 2px;
+  }
+}
