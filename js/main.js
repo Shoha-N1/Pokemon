@@ -106,19 +106,10 @@ function createDiv(pokemon) {
   elCard.querySelector("[data-card-weight]").textContent = pokemon.weight;
   elCard.querySelector("[data-card-height]").textContent = pokemon.height;
   elCard.querySelector("[data-card-add]").dataset.id = pokemon.id;
-  elCard.querySelector("[data-card-add]").textContent = favourites.includes(pokemon.id) ? "Added" : "Add";
+  elCard.querySelector("[data-card-add]").textContent = favourites.includes(pokemon.id) ? "❤️" : "🤍";
 
  
   return elCard
-
-  // elHeart.textContent = "❤";
-  // elHeart.classList.add("heart")
-  // elHeart.addEventListener("click", () => {
-  //   // elHeart.classList.add("hert")
-  //   // elHeart.style.color = "red"  elHeart.style.color = "white"
-    
-  // })
-
   
 }
 
