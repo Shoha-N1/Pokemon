@@ -13,7 +13,7 @@ let elFavorites = document.querySelector("[data-favorites]")
 
 const favourites = getFavourites();
 
-renderFav(favourites);
+renderFav(favourites);  
 
 elBox.addEventListener("click", (evt) => {
   onFavouriteClick(evt);
@@ -56,8 +56,6 @@ function getFavourites() {
   return JSON.parse(stringFav);
 }
 
-
-
 elForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   let pokemon = {
@@ -77,9 +75,6 @@ elForm.addEventListener("submit", function (evt) {
   pokemons.unshift(pokemon);
   elBox.prepend(createDiv(pokemon));
 
-  
-
-  
 });
 
 renderPokemons(pokemons)
@@ -87,12 +82,6 @@ renderPokemons(pokemons)
 function renderPokemons(pPokemons) {
   elBox.innerHTML = "";
   pPokemons.filter((pokemon) => elBox.append(createDiv(pokemon)))
-  // for (let i = 0; i < pPokemons.length; i++) {
-  //   let pokemon = pPokemons[i];
-
-  //   elBox.appendChild(createDiv(pokemon));
-  // }
- 
 }
 
 function createDiv(pokemon) {
@@ -108,11 +97,8 @@ function createDiv(pokemon) {
   elCard.querySelector("[data-card-add]").dataset.id = pokemon.id;
   elCard.querySelector("[data-card-add]").textContent = favourites.includes(pokemon.id) ? "❤️" : "🤍";
 
- 
-  return elCard
-  
+  return elCard 
 }
-
 
 elInputSearch.addEventListener("keyup", (evt) => {
   let newPokemons = [];
@@ -123,9 +109,6 @@ elInputSearch.addEventListener("keyup", (evt) => {
   });
   renderPokemons(newPokemons);
 });
-
-
-
 
 
 elSelect.addEventListener("click", (evt) => {

@@ -1,5 +1,3 @@
-
-
 let pokemons = [
     {
       id: 1,

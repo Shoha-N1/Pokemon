@@ -1,5 +1,4 @@
 document.addEventListener("click", (evt) => {
-
     onModalButtonClick(evt)
     onModalOutsideClick(evt)
     onModalCLoseClick(evt)
@@ -8,9 +7,7 @@ document.addEventListener("click", (evt) => {
 
 function onModalCLoseClick(evt) {
     let el = evt.target.closest("[data-modal-close]")
-
     if(!el) return;
-
     el.parentElement.parentElement.classList.remove("show")
 }
 
@@ -18,7 +15,6 @@ function onModalCLoseClick(evt) {
 function onModalButtonClick(evt) {
 
     let el = evt.target.closest("[data-modal-open]")
-
     if(!el) return;
 
     let modalSelector = el.dataset.modalOpen;
@@ -29,7 +25,6 @@ function onModalButtonClick(evt) {
 
 function onModalOutsideClick(evt) {
     let el = evt.target;
-
     if(!el.matches("[data-modal]")) return;
 
     el.classList.remove("show")
